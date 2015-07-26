@@ -47,3 +47,7 @@ data$activity<-factor(data$activity, levels=activitylabel$V1, labels=activitylab
 # activity and each subject
 dataMelt<-melt(data, id=c("subject","activity"), measure. vars=meanstdval)
 newdata<-dcast(dataMelt, subject + activity ~ variable, mean)
+
+#Finally:
+#write.table(newdata,"c:/Users/Datos/Documents/Accelerometer/mydata.txt",row.names=F)
+
